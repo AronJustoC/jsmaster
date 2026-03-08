@@ -15,6 +15,7 @@ JSsenior/
 ├── Dia01/           # Fundamentos: tipos, operadores, scope, lógica básica
 ├── Dia02/           # Funciones, Arrays, Objetos
 ├── Dia03/           # ES6+, Closures, This y Binding
+├── Dia04/           # Promises, Async/Await y Asincronía
 └── (más días por venir)
 ```
 
@@ -69,6 +70,9 @@ cd Dia02 && node ejercicios.js
 
 # Día 3
 cd Dia03 && node ejercicios.js
+
+# Día 4
+cd Dia04 && node ejercicios.js
 ```
 
 ## 📝 Progreso
@@ -78,6 +82,7 @@ cd Dia03 && node ejercicios.js
 | 01 | Fundamentos (tipos, scope, lógica) | ✅ Completado |
 | 02 | Funciones, Arrays, Objetos | ✅ Completado |
 | 03 | ES6+, Closures, This | ✅ Completado |
+| 04 | Promises, Async/Await, Asincronía | ✅ Completado |
 
 ## 🤝 Contribuciones
 

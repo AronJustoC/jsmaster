@@ -8,6 +8,16 @@ Este repositorio documenta mi viaje hacia la maestría en JavaScript. Cada conce
 
 **No es otro tutorial más.** Es un registro de aprendizaje profundo donde cada tema se entiende realmente, no solo se "usa".
 
+## 📂 Estructura
+
+```
+JSsenior/
+├── Dia01/           # Fundamentos: tipos, operadores, scope, lógica básica
+├── Dia02/           # Funciones, Arrays, Objetos
+├── Dia03/           # ES6+, Closures, This y Binding
+└── (más días por venir)
+```
+
 ## 🗺️ Roadmap
 
 ```
@@ -39,17 +49,6 @@ Frameworks & Ecosistema
 └── Frameworks (React/Next.js)
 ```
 
-## 📂 Estructura
-
-```
-jsmaster/
-├── fundamentals/      # Conceptos básicos
-├── deep-dives/       # Temas avanzados
-├── projects/         # Proyectos prácticos
-├── exercises/        # Ejercicios por tema
-└── notes/            # Apuntes y resumenes
-```
-
 ## 🎯 Enfoque
 
 - **Calidad sobre cantidad**: Cada tema se domina antes de avanzar
@@ -57,9 +56,32 @@ jsmaster/
 - **Entender el "por qué"**: No solo cómo, sino cuándo y por qué usarlo
 - **Best practices**: Código que se pueda mantener, no código que "funciona"
 
+## 🚀 Cómo Ejecutar los Ejercicios
+
+Cada día tiene su propia carpeta con `ejercicios.js`. Para ejecutarlos:
+
+```bash
+# Día 1
+cd Dia01 && node ejercicios.js
+
+# Día 2
+cd Dia02 && node ejercicios.js
+
+# Día 3
+cd Dia03 && node ejercicios.js
+```
+
+## 📝 Progreso
+
+| Día | Tema | Estado |
+|-----|------|--------|
+| 01 | Fundamentos (tipos, scope, lógica) | ✅ Completado |
+| 02 | Funciones, Arrays, Objetos | ✅ Completado |
+| 03 | ES6+, Closures, This | ✅ Completado |
+
 ## 🤝 Contribuciones
 
-¿Querés contribuir? Las PRs son bienvenidas. Pero recordá: este es un registro de aprendizaje personal. Si trovás errores o suggestaciones, abrí un issue.
+¿Querés contribuir? Las PRs son bienvenidas. Pero recordá: este es un registro de aprendizaje personal. Si trovás errores o sugerencias, abrí un issue.
 
 ## 📜 Licencia
 

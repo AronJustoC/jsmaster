@@ -12,6 +12,8 @@ function obtenerNombreYEdad(usuario) {
 function obtenerPrimerYSegundo(array) {
   // EXTRAE primer y segundo elemento
   // Return: { primero: 10, segundo: 20 }
+  let [primero, segundo] = array;
+  return {primero, segundo};
 }
 
 // --- Spread operator ---
@@ -25,14 +27,19 @@ function crearContador() {
   // CREA un closure que cuenta llamadas
   // Return: función que retorna 1, 2, 3...
   let contador = 0;
-  contador++
-  return contador;
+  return function() {
+    contador++;
+    return contador;
+  };
 }
 
 // --- Closure (fabrica) ---
 function crearSaludo(saludo) {
   // CREA función que usa el saludo
   // Return: función que recibe nombre y retorna "Hola, Juan!"
+  return function(nombre) {
+    return `${saludo}, ${nombre}!`;
+  };
 }
 
 // --- This en objetos ---
@@ -40,6 +47,7 @@ const usuario = {
   nombre: "Ana",
   saludar() {
     // RETURN string con this.nombre
+    return `Hola ${this.nombre}`
   }
 };
 
@@ -48,6 +56,7 @@ const robot = {
   nombre: "Robot",
   saludar: () => {
     // Arrow no tiene own this
+    return `Hola soy ${this.nombre}`;
   }
 };
 
@@ -58,6 +67,7 @@ function presentar() {
 
 function crearPresentador(persona) {
   // Usa bind para vincular this
+  return presentar.bind(persona);
 }
 
 // TESTS

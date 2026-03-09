@@ -16,6 +16,7 @@ JSsenior/
 ├── Dia02/           # Funciones, Arrays, Objetos
 ├── Dia03/           # ES6+, Closures, This y Binding
 ├── Dia04/           # Promises, Async/Await y Asincronía
+├── Dia04.1/         # Promises Profundización (patrones avanzados)
 └── (más días por venir)
 ```
 
@@ -73,6 +74,9 @@ cd Dia03 && node ejercicios.js
 
 # Día 4
 cd Dia04 && node ejercicios.js
+
+# Día 4.1
+cd Dia04.1 && node ejercicios.js
 ```
 
 ## 📝 Progreso
@@ -83,6 +87,7 @@ cd Dia04 && node ejercicios.js
 | 02 | Funciones, Arrays, Objetos | ✅ Completado |
 | 03 | ES6+, Closures, This | ✅ Completado |
 | 04 | Promises, Async/Await, Asincronía | ✅ Completado |
+| 04.1 | Promises Profundización (patrones avanzados) | ⏳ Pendiente |
 
 ## 🤝 Contribuciones
 

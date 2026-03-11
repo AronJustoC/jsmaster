@@ -1,4 +1,4 @@
-# Día 04.1 - Promises Profundización
+# Día 04.1 - Promises Profundización ✅ COMPLETADO
 
 ## Objetivo
 
@@ -15,18 +15,18 @@ Dominar patrones avanzados de Promises que usarás en producción real: manejo d
 - Semaphore (concurrencia limitada)
 - Patrones mixtos (paralelo + secuencial)
 
-## Ejercicios (por resolver)
+## Ejercicios Completados
 
-- [ ] Ejercicio 1 - `obtenerDatosSeguros` (allSettled)
-- [ ] Ejercicio 2 - `procesarPedidos` (allSettled con datos)
-- [ ] Ejercicio 3 - `fetchConTimeout` (race)
-- [ ] Ejercicio 4 - `primerRespuestaExitosa` (any)
-- [ ] Ejercicio 5 - `procesoPorFases` (encadenamiento)
-- [ ] Ejercicio 6 - `retry` (reintentos)
-- [ ] Ejercicio 7 - `procesoMixto` (paralelo + secuencial)
-- [ ] Ejercicio 8 - `promisify` (callback → promise)
-- [ ] Ejercicio 9 - `DelayedQueue` (clase)
-- [ ] Ejercicio 10 - `Semaphore` (clase)
+- [x] Ejercicio 1 - `obtenerDatosSeguros` (allSettled)
+- [x] Ejercicio 2 - `procesarPedidos` (allSettled con datos)
+- [x] Ejercicio 3 - `fetchConTimeout` (race)
+- [x] Ejercicio 4 - `primerRespuestaExitosa` (any)
+- [x] Ejercicio 5 - `procesoPorFases` (encadenamiento)
+- [x] Ejercicio 6 - `retry` (reintentos)
+- [x] Ejercicio 7 - `procesoMixto` (paralelo + secuencial)
+- [x] Ejercicio 8 - `promisify` (callback → promise)
+- [x] Ejercicio 9 - `DelayedQueue` (clase)
+- [x] Ejercicio 10 - `Semaphore` (clase)
 
 ## Conceptos Clave
 
@@ -56,20 +56,20 @@ async function retry(fn, intentos, delay) {
 ## Cómo Ejecutar
 
 ```bash
-node ejercicios.js
+cd Dia04.1 && node ejercicios.js
 ```
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leídas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leídas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.js`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.js`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

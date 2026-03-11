@@ -87,7 +87,7 @@ cd Dia04.1 && node ejercicios.js
 | 02 | Funciones, Arrays, Objetos | ✅ Completado |
 | 03 | ES6+, Closures, This | ✅ Completado |
 | 04 | Promises, Async/Await, Asincronía | ✅ Completado |
-| 04.1 | Promises Profundización (patrones avanzados) | ⏳ Pendiente |
+| 04.1 | Promises Profundización (patrones avanzados) | ✅ Completado |
 
 ## 🤝 Contribuciones
 

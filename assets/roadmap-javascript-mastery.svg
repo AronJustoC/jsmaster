@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">JavaScript Mastery Roadmap</title>
+  <desc id="desc">Roadmap en cuatro fases: Fundamentos, Profundizando, Patrones Avanzados y Frameworks & Ecosistema.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 44px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #1e1e1e; }
+      .cardTitle { font: 700 30px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #1e1e1e; }
+      .item { font: 500 22px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #2f2f2f; }
+      .arrow { fill: none; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4a9eed" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="780" />
+  <text class="title" x="700" y="70" text-anchor="middle">JavaScript Mastery Roadmap</text>
+
+  <rect x="40" y="140" width="300" height="580" rx="22" fill="#a5d8ff" stroke="#4a9eed" stroke-width="3"/>
+  <text class="cardTitle" x="190" y="195" text-anchor="middle">Fundamentos</text>
+  <text class="item" x="68" y="250">- Tipos de datos y operadores</text>
+  <text class="item" x="68" y="290">- Control de flujo</text>
+  <text class="item" x="68" y="330">- Funciones</text>
+  <text class="item" x="68" y="370">- Arrays y objetos</text>
+  <text class="item" x="68" y="410">- ES6+ Features</text>
+
+  <rect x="375" y="140" width="300" height="580" rx="22" fill="#d0bfff" stroke="#8b5cf6" stroke-width="3"/>
+  <text class="cardTitle" x="525" y="195" text-anchor="middle">Profundizando</text>
+  <text class="item" x="403" y="250">- Closures y scope</text>
+  <text class="item" x="403" y="290">- This y contexto</text>
+  <text class="item" x="403" y="330">- Prototypes y herencia</text>
+  <text class="item" x="403" y="370">- Async JavaScript</text>
+  <text class="item" x="403" y="410">- Modulos (CommonJS, ES Modules)</text>
+
+  <rect x="710" y="140" width="300" height="580" rx="22" fill="#ffd8a8" stroke="#f59e0b" stroke-width="3"/>
+  <text class="cardTitle" x="860" y="195" text-anchor="middle">Patrones Avanzados</text>
+  <text class="item" x="738" y="250">- Patrones de diseno en JS</text>
+  <text class="item" x="738" y="290">- Programacion funcional</text>
+  <text class="item" x="738" y="330">- Clean Code principles</text>
+  <text class="item" x="738" y="370">- Testing (Jest, Vitest)</text>
+  <text class="item" x="738" y="410">- TypeScript</text>
+
+  <rect x="1045" y="140" width="315" height="580" rx="22" fill="#b2f2bb" stroke="#22c55e" stroke-width="3"/>
+  <text class="cardTitle" x="1202" y="195" text-anchor="middle">Frameworks &amp; Ecosistema</text>
+  <text class="item" x="1073" y="250">- Node.js fundamentals</text>
+  <text class="item" x="1073" y="290">- NPM y gestion de paquetes</text>
+  <text class="item" x="1073" y="330">- Bundlers (Vite, Webpack)</text>
+  <text class="item" x="1073" y="370">- Frameworks (React/Next.js)</text>
+
+  <path class="arrow" d="M340 430 C355 430, 360 430, 375 430" stroke="#4a9eed"/>
+  <path class="arrow" d="M675 430 C690 430, 695 430, 710 430" stroke="#8b5cf6"/>
+  <path class="arrow" d="M1010 430 C1025 430, 1030 430, 1045 430" stroke="#f59e0b"/>
+</svg>

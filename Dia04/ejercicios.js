@@ -33,12 +33,10 @@ async function obtenerUsuario() {
 
 // --- Ejercicio 4: try/catch con async/await ---
 async function dividirSegura(a, b) {
-  // USA async/await y try/catch
-  // Return: resultado de dividir o mensaje de error
   try {
-    return a / b;
+    return await dividir(a, b);
   } catch (error) {
-    return error;
+    return error.message;
   }
 }
 

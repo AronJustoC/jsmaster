@@ -12,16 +12,16 @@ Dominar la programación asíncrona en JavaScript: desde Promises hasta async/aw
 - Promise.all(), Promise.race(), Promise.allSettled()
 - Manejo de errores
 
-## Ejercicios (por resolver)
+## Ejercicios (completados)
 
-- [ ] Ejercicio 1 - `esperarYRetornar` (Promise básica)
-- [ ] Ejercicio 2 - `dividir` (then/catch)
-- [ ] Ejercicio 3 - `obtenerUsuario` (async/await)
-- [ ] Ejercicio 4 - `dividirSegura` (try/catch)
-- [ ] Ejercicio 5 - `obtenerDatosMultiples` (Promise.all)
-- [ ] Ejercicio 6 - `chainPromises` (encadenar)
-- [ ] Ejercicio 7 - `verificarEdad` (reject condicional)
-- [ ] Ejercicio 8 - `procesoCompleto` (múltiples await)
+- [x] Ejercicio 1 - `esperarYRetornar` (Promise básica)
+- [x] Ejercicio 2 - `dividir` (then/catch)
+- [x] Ejercicio 3 - `obtenerUsuario` (async/await)
+- [x] Ejercicio 4 - `dividirSegura` (try/catch)
+- [x] Ejercicio 5 - `obtenerDatosMultiples` (Promise.all)
+- [x] Ejercicio 6 - `chainPromises` (encadenar)
+- [x] Ejercicio 7 - `verificarEdad` (reject condicional)
+- [x] Ejercicio 8 - `procesoCompleto` (múltiples await)
 
 ## Conceptos Clave
 
@@ -57,9 +57,9 @@ node ejercicios.js
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas documentadas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas documentadas
 
 ## Entregables
 

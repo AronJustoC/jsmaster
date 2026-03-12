@@ -49,31 +49,30 @@ console.log(a === b); // true
 
 ## 2) ES Modules (import/export)
 
-### En Node.js necesitas package.json con "type": "module"
+### En Node.js podés usar ES Modules de dos formas
 
-```json
-{
-  "type": "module"
-}
-```
+1) Usando archivos `.mjs` (siempre se interpretan como ESM)
+2) Usando `package.json` con `"type": "module"` (para que `.js` sea ESM)
+
+En este dia se usan archivos `.mjs` para los ejercicios ESM.
 
 ### Named exports
 
 ```javascript
-// archivo: utils.js
+// archivo: utils.mjs
 export const suma = (a, b) => a + b;
 export const resta = (a, b) => a - b;
 ```
 
 ```javascript
 // importar
-import { suma, resta } from './utils.js';
+import { suma, resta } from './utils.mjs';
 ```
 
 ### Default export
 
 ```javascript
-// archivo: config.js
+// archivo: config.mjs
 export default class Config {
   constructor() {
     this.env = 'development';
@@ -82,15 +81,21 @@ export default class Config {
 ```
 
 ```javascript
-import Config from './config.js';
+import Config from './config.mjs';
 const config = new Config();
 ```
 
 ### Alias
 
 ```javascript
-import { suma as add } from './utils.js';
+import { suma as add } from './utils.mjs';
 console.log(add(2, 3)); // 5
+```
+
+### Ejecutar un archivo ESM
+
+```bash
+node ejerciciosESM.mjs
 ```
 
 ---

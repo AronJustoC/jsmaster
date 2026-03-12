@@ -215,37 +215,81 @@ async function fetchConRetry(url, maxIntentos = 3) {
 
 ---
 
-## 9) Errores Comunes
+## 9) Errores Comunes en Producción
 
-### 1. Olvidar await en .json()
+### 1. Olvidar await en fetch (el más común)
 
 ```javascript
-// ❌
-const datos = fetch(url).then(r => r.json());
+// ❌ Return Promise, no el resultado
+const datos = fetch(url);
 
-// ✅
+// ✅ Await en fetch Y en .json()
+const respuesta = await fetch(url);
+const datos = await respuesta.json();
+
+// ✅ Todo en una línea
 const datos = await (await fetch(url)).json();
 ```
 
 ### 2. No verificar response.ok
 
 ```javascript
-// ❌
+// ❌ fetch NO lanza error en 404/500
 const datos = await fetch(url).then(r => r.json());
 
-// ✅
+// ✅ Siempre verificar
 const r = await fetch(url);
-if (!r.ok) throw new Error('Falló');
+if (!r.ok) throw new Error(`Error ${r.status}: ${r.statusText}`);
 const datos = await r.json();
 ```
 
-### 3. No manejar errores
+### 3. Olvidar await en .json()
 
 ```javascript
-// ❌
-fetch(url).then(r => r.json());
+// ❌ .json() retorna Promise
+const datos = respuesta.json();
 
 // ✅
+const datos = await respuesta.json();
+```
+
+### 4. URL mal escrita
+
+```javascript
+// ❌ Sobra "URL:" al inicio
+fetch(`URL: https://api.com/users/${id}`)
+
+// ✅
+fetch(`https://api.com/users/${id}`)
+```
+
+### 5. Usar método wrong (POST en vez de PUT)
+
+```javascript
+// ❌ Crear en vez de actualizar
+method: 'POST'
+
+// ✅ PUT para actualizar, POST para crear
+method: 'PUT'
+```
+
+### 6. No hacer JSON.stringify en body
+
+```javascript
+// ❌ body debe ser string
+body: { name: 'Juan' }
+
+// ✅
+body: JSON.stringify({ name: 'Juan' })
+```
+
+### 7. No manejar errores
+
+```javascript
+// ❌ Promise huérfana
+fetch(url).then(r => r.json());
+
+// ✅ try/catch
 try {
   const r = await fetch(url);
   const datos = await r.json();
@@ -274,3 +318,16 @@ try {
 - Módulos (ES Modules, CommonJS)
 - NPM y paquetes
 - Introducción a Node.js
+
+---
+
+## Errores Encontrados al Resolver
+
+Estos fueron los errores reales que surgieron al implementar los ejercicios:
+
+1. **Falta de `await` en fetch** - El más común, fetch retorna Promise si no se usa await
+2. **URL mal escrita** - Sobrabba "URL:" al inicio de la cadena
+3. **Método incorrecto** - POST en vez de PUT para actualizar
+4. **Función generadora incorrecta** - `async function*` en vez de `async function`
+5. **Falta de `.toLowerCase()`** - APIs como PokeAPI requieren minúsculas
+6. **No verificar `response.ok`** - fetch no lanza error en 404/500

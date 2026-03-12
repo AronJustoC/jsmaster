@@ -1,0 +1,10 @@
+{
+  "name": "jsenior-dia06",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Día 06 - Módulos y Node.js Basics",
+  "main": "ejercicios.js",
+  "scripts": {
+    "start": "node ejercicios.js"
+  }
+}

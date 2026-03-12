@@ -19,6 +19,7 @@ JSsenior/
 ├── Dia04.1/         # Promises Profundización (patrones avanzados)
 ├── Dia05/           # Fetch API y APIs Públicas
 ├── Dia06/           # Módulos y Node.js Basics
+├── Dia07/           # NPM, package.json y Scripts
 └── (más días por venir)
 ```
 
@@ -85,6 +86,9 @@ cd Dia05 && node ejercicios.js
 
 # Día 6
 cd Dia06 && node ejercicios.js
+
+# Día 7
+cd Dia07 && node ejercicios.js
 ```
 
 ## 📝 Progreso
@@ -97,7 +101,8 @@ cd Dia06 && node ejercicios.js
 | 04 | Promises, Async/Await, Asincronía | ✅ Completado |
 | 04.1 | Promises Profundización (patrones avanzados) | ✅ Completado |
 | 05 | Fetch API y APIs Públicas | ✅ Completado |
-| 06 | Módulos y Node.js Basics | ⏳ Pendiente |
+| 06 | Módulos y Node.js Basics | ✅ Completado |
+| 07 | NPM, package.json y Scripts | ⏳ Pendiente |
 
 ## 🤝 Contribuciones
 

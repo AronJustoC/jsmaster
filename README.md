@@ -96,7 +96,7 @@ cd Dia06 && node ejercicios.js
 | 03 | ES6+, Closures, This | ✅ Completado |
 | 04 | Promises, Async/Await, Asincronía | ✅ Completado |
 | 04.1 | Promises Profundización (patrones avanzados) | ✅ Completado |
-| 05 | Fetch API y APIs Públicas | ⏳ Pendiente |
+| 05 | Fetch API y APIs Públicas | ✅ Completado |
 | 06 | Módulos y Node.js Basics | ⏳ Pendiente |
 
 ## 🤝 Contribuciones

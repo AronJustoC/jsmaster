@@ -1,4 +1,4 @@
-# Día 05 - Fetch API y APIs Públicas
+# Día 05 - Fetch API y APIs Públicas ✅ COMPLETADO
 
 ## Objetivo
 
@@ -14,18 +14,18 @@ Dominar Fetch API para consumo de APIs REST reales, manejar los diferentes méto
 - Retry automático
 - APIs públicas (JSONPlaceholder, Rick & Morty, Pokémon)
 
-## Ejercicios (por resolver)
+## Ejercicios Completados
 
-- [ ] Ejercicio 1 - `obtenerUsuario` (GET básico)
-- [ ] Ejercicio 2 - `buscarPosts` (query params)
-- [ ] Ejercicio 3 - `crearPost` (POST)
-- [ ] Ejercicio 4 - `actualizarPost` (PUT)
-- [ ] Ejercicio 5 - `eliminarPost` (DELETE)
-- [ ] Ejercicio 6 - `fetchConEstado` (estados loading/error)
-- [ ] Ejercicio 7 - `obtenerDatosCompletos` (múltiples endpoints)
-- [ ] Ejercicio 8 - `fetchConRetry` (retry automático)
-- [ ] Ejercicio 9 - `obtenerPersonajesRickMorty` (Rick & Morty API)
-- [ ] Ejercicio 10 - `obtenerPokemon` (Pokémon API)
+- [x] Ejercicio 1 - `obtenerUsuario` (GET básico)
+- [x] Ejercicio 2 - `buscarPosts` (query params)
+- [x] Ejercicio 3 - `crearPost` (POST)
+- [x] Ejercicio 4 - `actualizarPost` (PUT)
+- [x] Ejercicio 5 - `eliminarPost` (DELETE)
+- [x] Ejercicio 6 - `fetchConEstado` (estados loading/error)
+- [x] Ejercicio 7 - `obtenerDatosCompletos` (múltiples endpoints)
+- [x] Ejercicio 8 - `fetchConRetry` (retry automático)
+- [x] Ejercicio 9 - `obtenerPersonajesRickMorty` (Rick & Morty API)
+- [x] Ejercicio 10 - `obtenerPokemon` (Pokémon API)
 
 ## Conceptos Clave
 
@@ -56,15 +56,15 @@ cd Dia05 && node ejercicios.js
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leídas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leídas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.js`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.js`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

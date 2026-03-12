@@ -7,11 +7,9 @@ async function obtenerUsuario(id) {
   // Return: objeto con datos del usuario
   // Manejar errores con try/catch
   try {
-    const respuesta = fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const respuesta = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     if (!respuesta.ok) {
-      throw new Error(
-        `Error ${respuesta.status}: ${(await respuesta).statusText}`,
-      );
+      throw new Error(`Error ${respuesta.status}: ${respuesta.statusText}`);
     }
     const usuario = await respuesta.json();
     return usuario;
@@ -64,9 +62,9 @@ async function actualizarPost(id, titulo, cuerpo) {
   // Body: { title, body, userId: 1 }
   // Return: post actualizado
   const respuesta = await fetch(
-    `URL: https://jsonplaceholder.typicode.com/posts/${id}`,
+    `https://jsonplaceholder.typicode.com/posts/${id}`,
     {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         title: titulo,
@@ -98,18 +96,10 @@ async function eliminarPost(id) {
 }
 
 // --- Ejercicio 6: Manejo de estados (loading/error/success) ---
-async function* fetchConEstado(url) {
-  // CREAR función que retorna objeto con:
-  // { loading: boolean, data: any, error: string|null }
-  // Simular delay para mostrar estados
-  yield { loading: false, data: null, error: error.message };
-
+async function fetchConEstado(url) {
   try {
-    await esperarMs(500);
     const respuesta = await fetch(url);
-    if (!respuesta.ok) {
-      throw new Error(respuesta.statusText);
-    }
+    if (!respuesta.ok) throw new Error(respuesta.statusText);
     const data = await respuesta.json();
     return { loading: false, data, error: null };
   } catch (error) {
@@ -167,8 +157,8 @@ async function obtenerPersonajesRickMorty() {
   // OBTENER personajes de Rick and Morty API
   // URL: https://rickandmortyapi.com/api/character
   // Return: array de personajes (name, status, species)
-  const respuesta = fetch("https://rickandmortyapi.com/api/character");
-  if (!respuesta) throw new Error(respuesta.statusText);
+  const respuesta = await fetch("https://rickandmortyapi.com/api/character");
+  if (!respuesta.ok) throw new Error(respuesta.statusText);
   const data = await respuesta.json();
   return data.results.map((p) => ({
     name: p.name,
@@ -182,7 +172,7 @@ async function obtenerPokemon(nombre) {
   // OBTENER datos de un Pokémon
   // URL: https://pokeapi.co/api/v2/pokemon/{nombre}
   // Return: { name, height, weight, types }
-  const respuesta = fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`);
+  const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre.toLowerCase()}`);
   if (!respuesta.ok) {
     throw new Error(respuesta.statusText);
   }

@@ -19,7 +19,7 @@ function obtenerMetadatosPackage(pkg) {
 // RETORNAR: { type: "module" | "commonjs" }
 function obtenerTipoModulo(pkg) {
   // TODO
-  return { type: pkg.type };
+  return { type: pkg.type || "commonjs" };
 }
 
 // ============================================
@@ -28,12 +28,12 @@ function obtenerTipoModulo(pkg) {
 
 // --- Ejercicio 3: listar scripts ---
 // RETORNAR: { scripts: string[] } (nombres de scripts, ordenados alfabeticamente)
-function listarnombresscripts(pkg) {
+function listarNombresScripts(pkg) {
   return { scripts: pkg.scripts ? Object.keys(pkg.scripts).sort() : [] };
 }
 // --- Ejercicio 4: existe script ---
 // RETORNAR: { existe: boolean }
-function tienescript(pkg, scriptname) {
+function tieneScript(pkg, scriptname) {
   // todo
   const scripts = pkg.scripts ?? {};
   return {

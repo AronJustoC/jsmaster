@@ -22,6 +22,7 @@ JSsenior/
 ├── Dia07/           # NPM, package.json y Scripts
 ├── Dia08/           # npm install, lockfile y node_modules
 ├── Dia09/           # npx, scripts profesionales y Vite
+├── Dia10/           # TypeScript: Tipado estático
 └── (más días por venir)
 ```
 
@@ -94,6 +95,9 @@ cd Dia07 && node ejercicios.js
 
 # Día 9
 cd Dia09 && node ejercicios.js
+
+# Día 10
+cd Dia10 && node ejercicios.js
 ```
 
 ## 📝 Progreso
@@ -110,6 +114,7 @@ cd Dia09 && node ejercicios.js
 | 07 | NPM, package.json y Scripts |  ✅ Completado  |
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
 | 09 | npx, scripts profesionales y Vite | ✅ Completado |
+| 10 | TypeScript: Tipado estático | ⏳ Pendiente |
 
 ## 🤝 Contribuciones
 

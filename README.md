@@ -109,7 +109,7 @@ cd Dia09 && node ejercicios.js
 | 06 | Módulos y Node.js Basics | ✅ Completado |
 | 07 | NPM, package.json y Scripts |  ✅ Completado  |
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
-| 09 | npx, scripts profesionales y Vite | ⏳ Pendiente |
+| 09 | npx, scripts profesionales y Vite | ✅ Completado |
 
 ## 🤝 Contribuciones
 

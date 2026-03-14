@@ -107,7 +107,7 @@ cd Dia08 && node ejercicios.js
 | 05 | Fetch API y APIs Públicas | ✅ Completado |
 | 06 | Módulos y Node.js Basics | ✅ Completado |
 | 07 | NPM, package.json y Scripts |  ✅ Completado  |
-| 08 | npm install, lockfile y node_modules | ⏳ Pendiente |
+| 08 | npm install, lockfile y node_modules | ✅ Completado |
 
 ## 🤝 Contribuciones
 

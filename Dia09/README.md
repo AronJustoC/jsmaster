@@ -11,13 +11,13 @@ Dominar npx para ejecutar comandos, escribir scripts npm profesionales, y entend
 - Conceptos de bundlers
 - Configuracion basica de Vite
 
-## Ejercicios (por resolver)
+## Ejercicios (completados)
 
-- [ ] Ejercicio 1 - Detectar tipo de comando (local/global/builtin)
-- [ ] Ejercicio 2 - Resolver comando con npx
-- [ ] Ejercicio 3 - Clasificar scripts por categoria
-- [ ] Ejercicio 4 - Validar seguridad de un script
-- [ ] Ejercicio 5 - Analizar configuracion Vite
+- [x] Ejercicio 1 - Detectar tipo de comando (local/global/builtin)
+- [x] Ejercicio 2 - Resolver comando con npx
+- [x] Ejercicio 3 - Clasificar scripts por categoria
+- [x] Ejercicio 4 - Validar seguridad de un script
+- [x] Ejercicio 5 - Analizar configuracion Vite
 
 ## Como Ejecutar
 
@@ -27,15 +27,15 @@ cd Dia09 && node ejercicios.js
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leidas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leidas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.js`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.js`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

@@ -21,6 +21,7 @@ JSsenior/
 ├── Dia06/           # Módulos y Node.js Basics
 ├── Dia07/           # NPM, package.json y Scripts
 ├── Dia08/           # npm install, lockfile y node_modules
+├── Dia09/           # npx, scripts profesionales y Vite
 └── (más días por venir)
 ```
 
@@ -91,8 +92,8 @@ cd Dia06 && node ejercicios.js
 # Día 7
 cd Dia07 && node ejercicios.js
 
-# Día 8
-cd Dia08 && node ejercicios.js
+# Día 9
+cd Dia09 && node ejercicios.js
 ```
 
 ## 📝 Progreso
@@ -108,6 +109,7 @@ cd Dia08 && node ejercicios.js
 | 06 | Módulos y Node.js Basics | ✅ Completado |
 | 07 | NPM, package.json y Scripts |  ✅ Completado  |
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
+| 09 | npx, scripts profesionales y Vite | ⏳ Pendiente |
 
 ## 🤝 Contribuciones
 

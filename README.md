@@ -114,7 +114,7 @@ cd Dia10 && node ejercicios.js
 | 07 | NPM, package.json y Scripts |  ✅ Completado  |
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
 | 09 | npx, scripts profesionales y Vite | ✅ Completado |
-| 10 | TypeScript: Tipado estático | ⏳ Pendiente |
+| 10 | TypeScript: Tipado estático | ✅ Completado |
 
 ## 🤝 Contribuciones
 

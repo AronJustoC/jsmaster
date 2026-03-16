@@ -8,17 +8,28 @@ console.log("Día 10 - TypeScript: Tipado estático y configuración");
 // DADO: variables sin tipo
 // RETORNAR: las mismas variables pero con tipos explícitos
 // Tipos: string, number, boolean
-function tiparPrimitivas(nombre, edad, esActivo) {
+function tiparPrimitivas(nombre: string, edad: number, esActivo: boolean) {
   // ENUNCIADO: Agregar tipos TypeScript a las variables
   // Return: objeto con las variables tipadas
+  return {
+    nombre,
+    edad,
+    esActivo,
+  };
 }
 
 // --- Ejercicio 2: tipar arrays y objetos ---
 // DADO: un array de números y un objeto usuario
 // RETORNAR: los mismos con tipos explícitos
-function tiparArraysYObjetos(usuarios, numeros) {
+
+interface User {
+  nombre: string;
+}
+
+function tiparArraysYObjetos(usuarios: User[], numeros: number[]) {
   // ENUNCIADO: Definir tipos para array de usuarios y array de números
   // Return: { usuarios: User[], numeros: number[] }
+  return { usuarios, numeros };
 }
 
 // ============================================
@@ -28,25 +39,70 @@ function tiparArraysYObjetos(usuarios, numeros) {
 // --- Ejercicio 3: crear interface ---
 // DADO: datos sueltos de un producto
 // RETORNAR: una interface Product y un objeto que la cumpla
-function crearInterfaceProducto(id, nombre, precio, enStock) {
+interface Product {
+  id: number;
+  nombre: string;
+  precio: number;
+  enStock: boolean;
+}
+
+function crearInterfaceProducto(
+  id: number,
+  nombre: string,
+  precio: number,
+  enStock: boolean,
+) {
   // ENUNCIADO: Crear interface Product y retornar producto tipado
   // Return: Product
+  return { id, nombre, precio, enStock };
 }
 
 // --- Ejercicio 4: crear type alias ---
 // DADO: tipos que se repiten
 // RETORNAR: un type alias para coordenadas (x, y) y una función que lo use
-function crearTypeAlias() {
+
+type Coordinate = { x: number; y: number };
+
+function crearTypeAlias(): number {
   // ENUNCIADO: Crear type Coordinate = { x: number, y: number }
   // Return: función que acepte Coordinate y retorne distancia al origen
+
+  const distanciaAlOrigen = (coord: Coordinate): number => {
+    return Math.sqrt(coord.x ** 2 + coord.y ** 2);
+  };
+  return distanciaAlOrigen({ x: 2, y: 6 });
 }
 
 // --- Ejercicio 5: discriminadores con union types ---
 // DADO: diferentes tipos de usuario
 // RETORNAR: función que diferencie entre ellos
-function manejarTipoUsuario(usuario) {
-  // ENUNCIADO: Usar union types para manejar "admin" | "user" | "guest"
-  // Return: string con el nivel de acceso
+
+interface Admin {
+  tipo: "admin";
+  nivel: number;
+}
+
+interface User1 {
+  tipo: "user";
+}
+
+interface Guest {
+  tipo: "guest";
+}
+
+type Usuario = Admin | User1 | Guest;
+
+function manejarTipoUsuario(usuario: Usuario): string {
+  // ENUNCIADO: Usar union types para manejar "admin" | "user" | "guest" Return: string con el nivel de acceso
+
+  switch (usuario.tipo) {
+    case "admin":
+      return `Acceso total (nivel ${usuario.nivel})`;
+    case "user":
+      return "Acceso limitado";
+    case "guest":
+      return "Acceso de solo lectura";
+  }
 }
 
 // ============================================
@@ -56,17 +112,38 @@ function manejarTipoUsuario(usuario) {
 // --- Ejercicio 6: función genérica ---
 // DADO: una función que retorna el primer elemento
 // RETORNAR: la misma pero con genéricos
-function obtenerPrimero(arr) {
+function obtenerPrimero<T>(arr: T[]): T {
   // ENUNCIADO: Usar <T> para tipar el retorno según el input
   // Return: T (el tipo del primer elemento)
+  return arr[0];
 }
 
 // --- Ejercicio 7: interface genérica ---
 // DADO: respuesta de API genérica
 // RETORNAR: una interface ApiResponse<T> que pueda usar
-function crearApiResponse() {
-  // ENUNCIADO: Crear interface genérica ApiResponse<T>
-  // Return: ejemplo de uso con ApiResponse<User>
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  ok: boolean;
+}
+
+interface User2 {
+  id: number;
+  nombre: string;
+}
+
+function crearApiResponse(): ApiResponse<User> {
+  // enunciado: crear interface genérica apiresponse<t>
+  // return: ejemplo de uso con apiresponse<user>
+  const user: User2 = { id: 1, nombre: "ana" };
+
+  const response: ApiResponse<User2> = {
+    data: user,
+    status: 200,
+    ok: true,
+  };
+
+  return response;
 }
 
 // ============================================
@@ -79,17 +156,28 @@ function crearApiResponse() {
 // - strict: si strict: true
 // - target: valor de target
 // - esModuleInterop: si esModuleInterop: true
-function analizarTsconfig(config) {
+
+function analizarTsconfig(config: {
+  strict?: boolean;
+  target?: string;
+  esModuleInterop?: boolean;
+}): { strict: boolean; target: string; esModuleInterop: boolean } {
   // ENUNCIADO: Analizar opciones comunes de tsconfig.json
   // Return: { strict, target, esModuleInterop }
+  return {
+    strict: config.strict === true,
+    target: config.target || "ES5",
+    esModuleInterop: config.esModuleInterop === true,
+  };
 }
 
 // --- Ejercicio 9: validar tipos en compilación ---
 // DADO: un valor y un tipo esperado
 // RETORNAR: true si el valor cumple el tipo, false si no
-function validarTipo(valor, tipoEsperado) {
+function validarTipo(valor: any, tipoEsperado: string): boolean {
   // ENUNCIADO: Simular validación de tipos en tiempo de compilación
   // Return: boolean
+  return typeof valor === tipoEsperado;
 }
 
 // ============================================
@@ -101,7 +189,11 @@ console.log("\n--- TESTS ---");
 // Test 1
 try {
   const r1 = tiparPrimitivas("Juan", 25, true);
-  console.log("ejercicio1:", typeof r1.nombre === "string" ? "ok" : "falló", r1);
+  console.log(
+    "ejercicio1:",
+    typeof r1.nombre === "string" ? "ok" : "falló",
+    r1,
+  );
 } catch (e) {
   console.log("ejercicio1 error:", e.message);
 }
@@ -159,7 +251,11 @@ try {
 try {
   const config = { strict: true, target: "ES2020", esModuleInterop: true };
   const r8 = analizarTsconfig(config);
-  console.log("ejercicio8:", r8.strict && r8.target === "ES2020" ? "ok" : "falló", r8);
+  console.log(
+    "ejercicio8:",
+    r8.strict && r8.target === "ES2020" ? "ok" : "falló",
+    r8,
+  );
 } catch (e) {
   console.log("ejercicio8 error:", e.message);
 }

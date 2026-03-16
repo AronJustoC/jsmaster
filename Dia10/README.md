@@ -12,17 +12,17 @@ Dominar los fundamentos de TypeScript: tipos básicos, interfaces, types, genér
 - Genéricos (<T>)
 - tsconfig.json y configuración
 
-## Ejercicios (por resolver)
+## Ejercicios (completados)
 
-- [ ] Ejercicio 1 - Tipar variables primitivas
-- [ ] Ejercicio 2 - Tipar arrays y objetos
-- [ ] Ejercicio 3 - Crear interface
-- [ ] Ejercicio 4 - Crear type alias
-- [ ] Ejercicio 5 - Discriminadores con union types
-- [ ] Ejercicio 6 - Función genérica
-- [ ] Ejercicio 7 - Interface genérica
-- [ ] Ejercicio 8 - Analizar tsconfig
-- [ ] Ejercicio 9 - Validar tipos en compilación
+- [x] Ejercicio 1 - Tipar variables primitivas
+- [x] Ejercicio 2 - Tipar arrays y objetos
+- [x] Ejercicio 3 - Crear interface
+- [x] Ejercicio 4 - Crear type alias
+- [x] Ejercicio 5 - Discriminadores con union types
+- [x] Ejercicio 6 - Función genérica
+- [x] Ejercicio 7 - Interface genérica
+- [x] Ejercicio 8 - Analizar tsconfig
+- [x] Ejercicio 9 - Validar tipos en compilación
 
 ## Como Ejecutar
 
@@ -40,15 +40,15 @@ cd Dia10 && node ejercicios.js
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leidas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leidas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.js`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.ts`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

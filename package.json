@@ -1,0 +1,26 @@
+{
+  "name": "jssenior",
+  "version": "1.0.0",
+  "description": "> Un camino estructurado para dominar JavaScript — desde cero hasta nivel profesional.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dia10": "ts-node --transpileOnly Dia10/ejercicios.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AronJustoC/jsmaster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AronJustoC/jsmaster/issues"
+  },
+  "homepage": "https://github.com/AronJustoC/jsmaster#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

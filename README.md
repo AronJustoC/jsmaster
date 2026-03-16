@@ -23,6 +23,9 @@ JSsenior/
 ├── Dia08/           # npm install, lockfile y node_modules
 ├── Dia09/           # npx, scripts profesionales y Vite
 ├── Dia10/           # TypeScript: Tipado estático
+├── Dia11/           # POO: Fundamentos con TypeScript
+├── Dia12/           # POO: Intermedio (abstract, interfaces)
+├── Dia13/           # POO: Patrones de diseño
 └── (más días por venir)
 ```
 
@@ -97,7 +100,16 @@ cd Dia07 && node ejercicios.js
 cd Dia09 && node ejercicios.js
 
 # Día 10
-cd Dia10 && node ejercicios.js
+npm run dia10
+
+# Día 11
+npm run dia11
+
+# Día 12
+npm run dia12
+
+# Día 13
+npm run dia13
 ```
 
 ## 📝 Progreso
@@ -115,6 +127,9 @@ cd Dia10 && node ejercicios.js
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
 | 09 | npx, scripts profesionales y Vite | ✅ Completado |
 | 10 | TypeScript: Tipado estático | ✅ Completado |
+| 11 | POO: Fundamentos con TypeScript | ⏳ Pendiente |
+| 12 | POO: Intermedio | ⏳ Pendiente |
+| 13 | POO: Patrones de diseño | ⏳ Pendiente |
 
 ## 🤝 Contribuciones
 

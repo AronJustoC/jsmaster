@@ -36,7 +36,6 @@ Aprender a trabajar con funciones, arrays y objetos en JavaScript.
 - `===` → comparación estricta (recomendado)
 
 ## Errores y Correcciones
-
 | Error | Causa | Solución |
 |-------|-------|----------|
 | `contarPropiedades` fallaba | Usaba `for...of` en objeto | Cambiar a `for...in` |

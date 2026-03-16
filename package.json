@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dia10": "ts-node --transpileOnly Dia10/ejercicios.ts"
+    "dia10": "ts-node --transpileOnly Dia10/ejercicios.ts",
+    "dia11": "ts-node --transpileOnly Dia11/ejercicios.ts",
+    "dia12": "ts-node --transpileOnly Dia12/ejercicios.ts",
+    "dia13": "ts-node --transpileOnly Dia13/ejercicios.ts"
   },
   "repository": {
     "type": "git",

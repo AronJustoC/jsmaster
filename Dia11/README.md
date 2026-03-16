@@ -11,15 +11,15 @@ Dominar los fundamentos de POO: clases, constructores, modificadores de acceso, 
 - Herencia con extends
 - Getters y Setters
 
-## Ejercicios (por resolver)
+## Ejercicios (completados)
 
-- [ ] Ejercicio 1 - Crear clase básica
-- [ ] Ejercicio 2 - Constructor con tipos
-- [ ] Ejercicio 3 - Public y Private
-- [ ] Ejercicio 4 - Readonly
-- [ ] Ejercicio 5 - Herencia con extends
-- [ ] Ejercicio 6 - Super y Protected
-- [ ] Ejercicio 7 - Getter y Setter
+- [x] Ejercicio 1 - Crear clase básica
+- [x] Ejercicio 2 - Constructor con tipos
+- [x] Ejercicio 3 - Public y Private
+- [x] Ejercicio 4 - Readonly
+- [x] Ejercicio 5 - Herencia con extends
+- [x] Ejercicio 6 - Super y Protected
+- [x] Ejercicio 7 - Getter y Setter
 
 ## Como Ejecutar
 
@@ -36,9 +36,9 @@ npm run dia11
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leidas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leidas y entendidas
 
 ## Entregables
 

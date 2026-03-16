@@ -127,7 +127,7 @@ npm run dia13
 | 08 | npm install, lockfile y node_modules | ✅ Completado |
 | 09 | npx, scripts profesionales y Vite | ✅ Completado |
 | 10 | TypeScript: Tipado estático | ✅ Completado |
-| 11 | POO: Fundamentos con TypeScript | ⏳ Pendiente |
+| 11 | POO: Fundamentos con TypeScript | ✅ Completado |
 | 12 | POO: Intermedio | ⏳ Pendiente |
 | 13 | POO: Patrones de diseño | ⏳ Pendiente |
 

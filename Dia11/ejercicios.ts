@@ -10,6 +10,19 @@ console.log("Día 11 - POO: Fundamentos con TypeScript");
 class Person {
   // ENUNCIADO: Crear clase con nombre, edad, email y método greet()
   // Return: clase Person
+  nombre: string;
+  edad: number;
+  email: string;
+
+  constructor(nombre: string, edad: number, email: string) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.email = email;
+  }
+
+  greet() {
+    return `Hola ${this.nombre} tienes ${this.edad} anios y tu email es: ${this.email}`;
+  }
 }
 
 // --- Ejercicio 2: constructor con tipos ---
@@ -19,6 +32,15 @@ class Product {
   // ENUNCIADO: Crear clase con id, nombre, precio
   // Usar constructor para inicializar
   // Return: clase Product
+  id: number;
+  nombre: string;
+  precio: number;
+
+  constructor(id: number, nombre: string, precio: number) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 }
 
 // ============================================
@@ -35,17 +57,38 @@ class BankAccount {
   // - método deposit() que suma al balance
   // - método getBalance() que retorna el balance
   // Return: clase BankAccount
+  public accountNumber: string;
+  private _balance: number;
+  constructor(accountNumber: string, balance: number) {
+    this.accountNumber = accountNumber;
+    this._balance = balance;
+  }
+  deposit(amount: number): void {
+    this._balance += amount;
+  }
+  getBalance(): number {
+    return this._balance;
+  }
 }
 
 // --- Ejercicio 4: readonly ---
 // DADO: una clase con propiedad inmutable
 // RETORNAR: clase User con id readonly
-class User1 {
+class User {
   // ENUNCIADO: Crear clase con:
   // - readonly id
   // - mutable name
   // - método updateName()
   // Return: clase User
+  readonly id: number;
+  nombre: string;
+  constructor(id: number, nombre: string) {
+    this.id = id;
+    this.nombre = nombre;
+  }
+  updateName(nuevoNombre: string): void {
+    this.nombre = nuevoNombre;
+  }
 }
 
 // ============================================
@@ -58,11 +101,21 @@ class User1 {
 class Animal {
   // ENUNCIADO: Crear clase base con nombre y método speak()
   // Return: clase Animal
+  nombre: string;
+  constructor(nombre: string) {
+    this.nombre = nombre;
+  }
+  speak(): string {
+    return "Sonido";
+  }
 }
 
 class Dog extends Animal {
   // ENUNCIADO: Extender Animal, sobrescribir speak()
   // Return: clase Dog
+  speak(): string {
+    return "Woof!";
+  }
 }
 
 // --- Ejercicio 6: super y protected ---
@@ -73,12 +126,24 @@ class Employee1 {
   // - protected salary
   // - public name
   // Return: clase Employee
+  protected salary: number;
+  public name: string;
+  constructor(name: string, salary: number) {
+    this.salary = salary;
+    this.name = name;
+  }
 }
 
 class Manager extends Employee1 {
   // ENUNCIADO: Extender Employee, usar super en constructor
   // - método getSalary() que retorna salary
   // Return: clase Manager
+  constructor(name: string, salary: number) {
+    super(name, salary);
+  }
+  getSalary(): number {
+    return this.salary;
+  }
 }
 
 // ============================================
@@ -94,6 +159,15 @@ class Temperature {
   // - getter celsius
   // - setter celsius (validar que sea número)
   // Return: clase Temperature
+  private _celsius: number;
+  get celsius(): number {
+    return this._celsius;
+  }
+  set celsius(value: number) {
+    if (typeof value === "number") {
+      this._celsius = value;
+    }
+  }
 }
 
 // ============================================

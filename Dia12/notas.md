@@ -90,6 +90,29 @@ class Counter {
 
 ---
 
+## 5) Mixins (Composición)
+
+```typescript
+// Función que recibe una clase y le agrega funcionalidad
+function Logger<T extends new (...args: any[]) => any>(Constructor: T) {
+  return class extends Constructor {
+    log(): void {
+      console.log("Logging...");
+    }
+  };
+}
+
+// Uso
+class MiClase {}
+const LoggerMiClase = Logger(MiClase);
+const instance = new LoggerMiClase();
+instance.log(); // "Logging..."
+```
+
+**Mixin:** Agrega comportamiento a una clase sin herencia directa.
+
+---
+
 ## Siguiente Día
 
 Día 13: Patrones de diseño - Singleton, Factory, Observer, Strategy, Decorator

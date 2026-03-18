@@ -14,13 +14,13 @@ Dominar conceptos intermedios: clases abstractas, interfaces, polimorfismo, comp
 
 ## Ejercicios (por resolver)
 
-- [ ] Ejercicio 1 - Clase abstracta
-- [ ] Ejercicio 2 - Implementar clase abstracta
-- [ ] Ejercicio 3 - Implementar interface
-- [ ] Ejercicio 4 - Múltiples interfaces
-- [ ] Ejercicio 5 - Polimorfismo
-- [ ] Ejercicio 6 - Mixins
-- [ ] Ejercicio 7 - Static
+- [x] Ejercicio 1 - Clase abstracta
+- [x] Ejercicio 2 - Implementar clase abstracta
+- [x] Ejercicio 3 - Implementar interface
+- [x] Ejercicio 4 - Múltiples interfaces
+- [x] Ejercicio 5 - Polimorfismo
+- [x] Ejercicio 6 - Mixins
+- [x] Ejercicio 7 - Static
 
 ## Como Ejecutar
 
@@ -37,15 +37,15 @@ npm run dia12
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
 - [ ] Notas leidas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.ts`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.ts`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

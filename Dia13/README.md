@@ -12,13 +12,13 @@ Dominar los patrones de diseño más usados en JS/TS: Singleton, Factory, Observ
 - Strategy
 - Decorator
 
-## Ejercicios (por resolver)
+## Ejercicios
 
-- [ ] Ejercicio 1 - Singleton
-- [ ] Ejercicio 2 - Factory
-- [ ] Ejercicio 3 - Observer
-- [ ] Ejercicio 4 - Strategy
-- [ ] Ejercicio 5 - Decorator
+- [x] Ejercicio 1 - Singleton
+- [x] Ejercicio 2 - Factory
+- [x] Ejercicio 3 - Observer
+- [x] Ejercicio 4 - Strategy
+- [x] Ejercicio 5 - Decorator
 
 ## Como Ejecutar
 
@@ -36,15 +36,15 @@ npm run dia13
 
 ## Criterio de Completado
 
-- [ ] Todas las funciones implementadas
-- [ ] Tests pasando
-- [ ] Notas leidas y entendidas
+- [x] Todas las funciones implementadas
+- [x] Tests pasando
+- [x] Notas leidas y entendidas
 
 ## Entregables
 
-- [ ] `ejercicios.ts`
-- [ ] `notas.md`
-- [ ] `README.md`
+- [x] `ejercicios.ts`
+- [x] `notas.md`
+- [x] `README.md`
 
 ## Siguiente Paso
 

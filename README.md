@@ -129,7 +129,7 @@ npm run dia13
 | 10 | TypeScript: Tipado estático | ✅ Completado |
 | 11 | POO: Fundamentos con TypeScript | ✅ Completado |
 | 12 | POO: Intermedio | ✅ Completado |
-| 13 | POO: Patrones de diseño | ⏳ Pendiente |
+| 13 | POO: Patrones de diseño | ✅ Completado |
 
 ## 🤝 Contribuciones
 

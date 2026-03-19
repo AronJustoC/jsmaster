@@ -13,6 +13,14 @@ class Database {
   // - método estático getInstance()
   // - retorna siempre la misma instancia
   // Return: clase Database
+  private static instance: Database;
+  private constructor() {}
+  static getInstance(): Database {
+    if (!Database.instance) {
+      Database.instance = new Database();
+    }
+    return Database.instance;
+  }
 }
 
 // ============================================
@@ -22,31 +30,41 @@ class Database {
 // --- Ejercicio 2: Factory pattern ---
 // DADO: tipos de notificación
 // RETORNAR: factory que crea notificaciones
-interface Notification {
+interface INotification {
   send(message: string): void;
 }
 
-class EmailNotification implements Notification {
+class EmailNotification implements INotification {
   send(message: string): void {
     console.log("Email:", message);
   }
 }
 
-class SMSNotification implements Notification {
+class SMSNotification implements INotification {
   send(message: string): void {
     console.log("SMS:", message);
   }
 }
 
-class PushNotification implements Notification {
+class PushNotification implements INotification {
   send(message: string): void {
     console.log("Push:", message);
   }
 }
 
-function createNotification(type: "email" | "sms" | "push"): Notification {
+function createNotification(type: "email" | "sms" | "push"): INotification {
   // ENUNCIADO: Factory que retorna la notificación correcta
   // Return: Notification
+  if (type === "email") {
+    return new EmailNotification();
+  }
+  if (type === "sms") {
+    return new SMSNotification();
+  }
+  if (type === "push") {
+    return new PushNotification();
+  }
+  throw new Error("Unknown type");
 }
 
 // ============================================
@@ -67,6 +85,16 @@ class Subject {
   // - método unsubscribe(observer)
   // - método notify(data)
   // Return: clase Subject
+  private observers: Observer[] = [];
+  subscribe(observer: Observer): void {
+    this.observers.push(observer);
+  }
+  unsuscribe(observer: Observer): void {
+    this.observers = this.observers.filter((o) => o !== observer);
+  }
+  notify(data: any): void {
+    this.observers.forEach((o) => o.update(data));
+  }
 }
 
 // ============================================
@@ -98,15 +126,18 @@ class ShoppingCart {
   // - método setStrategy(strategy)
   // - método checkout()
   // Return: clase ShoppingCart
+  private strategy: PaymentStrategy;
+  setStrategy(strategy: PaymentStrategy): void {
+    this.strategy = strategy;
+  }
+  checkout(): void {
+    this.strategy.pay(100);
+  }
 }
 
 // ============================================
 // PARTE 5: Decorator
 // ============================================
-
-// --- Ejercicio 5: Decorator pattern ---
-// DADO: café con toppings
-// RETORNAR: café decorado
 interface Coffee {
   getCost(): number;
   getDescription(): string;
@@ -125,11 +156,19 @@ class SimpleCoffee implements Coffee {
 function withMilk(coffee: Coffee): Coffee {
   // ENUNCIADO: Decorator que agrega leche
   // Return: Coffee
+  return {
+    getCost: () => coffee.getCost() + 2,
+    getDescription: () => coffee.getDescription() + ", milk",
+  };
 }
 
 function withSugar(coffee: Coffee): Coffee {
   // ENUNCIADO: Decorator que agrega azúcar
   // Return: Coffee
+  return {
+    getCost: () => coffee.getCost() + 1,
+    getDescription: () => coffee.getDescription() + ", sugar",
+  };
 }
 
 // ============================================
@@ -182,7 +221,14 @@ try {
   let coffee = new SimpleCoffee();
   coffee = withMilk(coffee);
   coffee = withSugar(coffee);
-  console.log("ejercicio5:", coffee.getDescription().includes("milk") && coffee.getDescription().includes("sugar") ? "ok" : "falló", coffee.getDescription());
+  console.log(
+    "ejercicio5:",
+    coffee.getDescription().includes("milk") &&
+      coffee.getDescription().includes("sugar")
+      ? "ok"
+      : "falló",
+    coffee.getDescription(),
+  );
 } catch (e) {
   console.log("ejercicio5 error:", e.message);
 }
